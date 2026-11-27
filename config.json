@@ -1,0 +1,110 @@
+{
+  "seeds": [
+    42,
+    123,
+    2024,
+    2025,
+    2026
+  ],
+  "main_seed": 42,
+  "python": "3.12.10",
+  "sklearn": "1.9.0",
+  "pandas": "3.1.0",
+  "numpy": "2.5.1",
+  "feature_sets": {
+    "FS1": [
+      "Warehouse_block",
+      "Mode_of_Shipment",
+      "Customer_care_calls",
+      "Customer_rating",
+      "Cost_of_the_Product",
+      "Prior_purchases",
+      "Product_importance",
+      "Gender",
+      "Discount_offered",
+      "Weight_in_gms"
+    ],
+    "FS2": [
+      "Warehouse_block",
+      "Mode_of_Shipment",
+      "Cost_of_the_Product",
+      "Prior_purchases",
+      "Product_importance",
+      "Gender",
+      "Discount_offered",
+      "Weight_in_gms"
+    ],
+    "FS3": [
+      "Warehouse_block",
+      "Mode_of_Shipment",
+      "Cost_of_the_Product",
+      "Product_importance",
+      "Discount_offered",
+      "Weight_in_gms"
+    ]
+  },
+  "grids": {
+    "LR": {
+      "clf__C": [
+        "0.01",
+        "0.1",
+        "1",
+        "10"
+      ],
+      "clf__class_weight": [
+        "None",
+        "balanced"
+      ]
+    },
+    "DT": {
+      "clf__max_depth": [
+        "3",
+        "5",
+        "10",
+        "None"
+      ],
+      "clf__min_samples_split": [
+        "2",
+        "5",
+        "10"
+      ],
+      "clf__min_samples_leaf": [
+        "1",
+        "5",
+        "10"
+      ]
+    },
+    "RF": {
+      "clf__n_estimators": [
+        "100",
+        "200",
+        "300"
+      ],
+      "clf__max_depth": [
+        "5",
+        "10",
+        "20",
+        "None"
+      ],
+      "clf__min_samples_leaf": [
+        "1",
+        "5",
+        "10"
+      ],
+      "clf__class_weight": [
+        "None",
+        "balanced"
+      ]
+    }
+  },
+  "cv": "StratifiedKFold(5, shuffle=True)",
+  "thresholds": [
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8
+  ]
+}
